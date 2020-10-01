@@ -8,6 +8,7 @@
 
 
     <div class="container">
+    <!-- MESSAGGE DELETE -->
         <?php if (!empty($_GET['roomId'])) { 
             $stanza_cancellata = $_GET['roomId'];
             $message = "la stanza:$stanza_cancellata è stata cancellata!"; ?>
@@ -25,6 +26,8 @@
             </div>
 
         <?php } ?>
+    <!-- MESSAGGE DELETE -->
+    <!-- MESSAGGE MODIFY -->
 
         <?php if (!empty($_GET['idmodified'])) { 
             $stanza_cancellata = $_GET['idmodified'];
@@ -43,6 +46,25 @@
             </div>
 
         <?php } ?>
+    <!-- MESSAGGE MODIFY -->
+    <!-- MESSAGGE INSERT -->    
+
+        <?php if (!empty($_GET['insert']) AND $_GET['insert'] == 1) { 
+            $message = "la stanza è stata inserita con successo!"; ?>
+            
+        
+            <div class="alert bg-success mt-3">
+                <?php echo $message ?>
+            </div>
+
+        <?php } elseif(!empty($_GET['insert']) AND $_GET['insert'] == 0) { ?>
+
+            <div class="alert bg-danger mt-3">
+                <?php echo "la stanza non è stata inserita" ?>
+            </div>
+
+        <?php } ?>
+    <!-- MESSAGGE INSERT -->    
 
         <table class="table table-dark">
             <thead>
@@ -70,5 +92,6 @@
         </table>
 
         <script src="dist/app.js"></script>
+        
 <?php include __DIR__.'/partials/template/footer.php'; ?>        
     

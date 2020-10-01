@@ -9,7 +9,7 @@
     $beds = $_POST['numeroLetti'];
 
     $sql = "UPDATE stanze
-            SET room_number = ?,floor = ?,beds = ?
+            SET room_number = ?,floor = ?,beds = ?,updated_at = NOW()
             WHERE id = ?";
 
     $stmt = $conn->prepare($sql);

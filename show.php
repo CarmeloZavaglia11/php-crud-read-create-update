@@ -28,4 +28,11 @@
                 </tbody>
             </table>
 
+            <form action="partials/delete/server.php" method="POST">
+                <input type="submit" class="btn btn-outline-danger" value="DELETE">
+                <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+            </form>
+
+            <a href="modify.php?id=<?php echo $row['id'];?>" class="btn btn-outline-warning mt-3">MODIFY</a>
+
 <?php include __DIR__.'/partials/template/footer.php'; ?>  

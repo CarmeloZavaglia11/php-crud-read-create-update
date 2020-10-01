@@ -11,10 +11,13 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm p-3 mb-5 bg-grey rounded">
-        <a class="navbar-brand" href="#">Hotel Boolean</a>
+        <a class="navbar-brand" href="index.php">Hotel Boolean</a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
+                <a class="nav-link" href="create.php">Insert Room<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
             </li>
             </ul>
